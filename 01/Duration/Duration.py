@@ -1,0 +1,21 @@
+h1 = int(input())
+m1 = int(input())
+s1 = int(input())
+h2 = int(input())
+m2 = int(input())
+s2 = int(input())
+ha = 0
+ma = 0
+sa = 0
+if(s2 < s1):
+    s2 += 60
+    m2 -= 1
+sa = s2-s1
+if(m2 < m1):
+    m2 += 60
+    h2 -= 1
+ma = m2-m1
+if(h2 < h1):
+    h2 += 24
+ha = h2-h1
+print(str(ha)+':'+str(ma)+':'+str(sa))
