@@ -1,19 +1,19 @@
 cnt = 0
-student = []
-id = []
+code = []
+grade = []
 score = ['A', 'B+', 'B', 'C+', 'C', 'D+', 'D', 'F']
 while True:
     n = input()
     if(n == 'q'):
         break
-    student.append(n.split())
-    id.append(n.split()[0])
+    c, g = n.split()
+    code.append(c)
+    grade.append(g)
 n = input().split()
 for e in n:
-    idx = id.index(e)
-    if(student[idx][1] == 'A'):
+    idx = code.index(e)
+    if(grade[idx] == 'A'):
         continue
-    student[idx][1] = score[score.index(student[idx][1])-1]
-student.sort()
-for e in student:
-    print(e[0], e[1])
+    grade[idx] = score[score.index(grade[idx])-1]
+for i in range(len(code)):
+    print(code[i], grade[i])
