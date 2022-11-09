@@ -17,7 +17,8 @@ def take(pocket, money_in):
 def pay(pocket, amt):
     total = amt
     pay = {}
-    for e in pocket:
+    notes = sorted(pocket.keys(),reverse=True)
+    for e in notes:
         cnt = min(pocket[e], total//e)
         if(cnt == 0):
             continue

@@ -17,5 +17,4 @@ def day_of_year(d, m, y):
         diy += 1
     return diy
 
-
-exec(input())  # DON'T remove this line
+# exec(input())  # DON'T remove this line
